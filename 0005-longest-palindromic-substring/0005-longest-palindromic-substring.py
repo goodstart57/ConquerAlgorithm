@@ -1,6 +1,7 @@
 class Solution:
 #     # 풀이 1
 #     def longestPalindrome(self, s: str) -> str:
+#         """solve with brute force"""
 #         length = len(s)
 
 #         if length == 1:
@@ -13,6 +14,7 @@ class Solution:
         
 #         return ""
     def longestPalindrome(self, s: str) -> str:
+        """solve with dp"""
         substring = ""
         dp = [[0] * len(s) for _ in range(len(s))]
         

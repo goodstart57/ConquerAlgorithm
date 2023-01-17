@@ -93,13 +93,13 @@ class Solution:
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
         wherewillyou = list(range(numRows)) + list(range(numRows-2, 0, -1))
-        print(wherewillyou)
+        # print(wherewillyou)
         
-        zigzag = [[] for _ in range(numRows)]
+        zigzag = [""] * numRows
         # print(zigzag)
         
         for i, char in enumerate(s):
             # print(i, char, i % numRows)
-            zigzag[wherewillyou[i%len(wherewillyou)]].append(char)
+            zigzag[wherewillyou[i%len(wherewillyou)]] += char
             
-        return "".join(map(lambda x: "".join(x), zigzag))
+        return "".join(zigzag)

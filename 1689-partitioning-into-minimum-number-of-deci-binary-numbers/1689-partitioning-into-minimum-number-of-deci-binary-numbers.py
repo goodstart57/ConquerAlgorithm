@@ -1,6 +1,6 @@
 class Solution:
     def minPartitions(self, n: str) -> int:
-        return int(max(list(n)))
+        return int(max(n))
     
     """
     def minPartitions(self, n: str) -> int:

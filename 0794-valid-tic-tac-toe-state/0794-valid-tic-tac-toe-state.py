@@ -49,16 +49,3 @@ class Solution:
         
         else:
             return False
-        
-        # if cnt_X - cnt_O not in (0, 1):
-        #     return False
-        # elif 
-#         # elif cnt_X >= cnt_O and cnt_O_line > 0:
-#         #     return False
-#         elif cnt_X == cnt_O and cnt_X_line > 0:
-#             return False
-#         elif cnt_X + cnt_O == 9 and cnt_X_line == 2:
-#             return True
-#         elif cnt_O_line + cnt_X_line > 1:
-#             return False
-#         return True

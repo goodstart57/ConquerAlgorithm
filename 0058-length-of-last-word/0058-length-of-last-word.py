@@ -1,5 +1,4 @@
 class Solution:
-    """
     def lengthOfLastWord(self, s: str) -> int:
         return len(s.split()[-1])
     """
@@ -12,3 +11,4 @@ class Solution:
             result += 1
             i -= 1
         return result
+    """

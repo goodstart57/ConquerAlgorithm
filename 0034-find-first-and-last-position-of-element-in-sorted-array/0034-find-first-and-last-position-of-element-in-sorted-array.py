@@ -1,5 +1,30 @@
 class Solution:
+    def search(self, nums, target):
+        l, r = 0, len(nums)        
+        while l < r:
+            m = (l + r) // 2
+            # print(f"  [{l}/{m}/{r}] {nums[m]}")
+            if nums[m] < target:
+                l = m + 1
+            else:
+                r = m
+        return l
+    
     def searchRange(self, nums: List[int], target: int) -> List[int]:
+        result = [-1, -1]
+        
+        if len(nums) == 0:
+            return result
+        
+        result[0] = self.search(nums, target)
+        result[1] = self.search(nums, target+1) - 1
+        
+        if result[0] > result[1]:
+            result = [-1, -1]
+        
+        return result
+    
+    """def searchRange(self, nums: List[int], target: int) -> List[int]:
         if not nums:
             return [-1, -1]
         
@@ -28,4 +53,4 @@ class Solution:
             while si > 0 and nums[si-1] == target: si -= 1
             while ei < len(nums)-1 and nums[ei+1] == target: ei += 1
             
-        return [si, ei]
+        return [si, ei]"""
